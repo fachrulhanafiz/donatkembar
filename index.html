@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Donat Kembar — Donat & Bomboloni Rp2.000 di Hinai</title>
+<meta name="description" content="Donat Kembar: donat empuk dan bomboloni isi lumer mulai Rp2.000 per biji. Pasar 4.5, Tanjung Beringin, Hinai. Pesan lewat WhatsApp.">
+<meta name="theme-color" content="#f4e4d0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='38' cy='50' r='26' fill='none' stroke='%23f0457e' stroke-width='12'/%3E%3Ccircle cx='62' cy='50' r='26' fill='none' stroke='%232b1610' stroke-width='12'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav-wrap">
+  <div class="nav">
+    <a href="#home" class="brand" data-page="home"><span class="logo"><i></i><i></i></span><span id="brandName">Donat Kembar</span></a>
+    <nav class="links" id="links" aria-label="Menu utama">
+      <a href="#home" data-page="home" class="active">Home</a>
+      <a href="#menu" data-page="menu">Menu</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <!-- ============ HOME ============ -->
+  <section class="page active" id="page-home">
+    <div class="hero">
+      <div class="sprinkles" id="sprinkles" aria-hidden="true"></div>
+      <div class="hero-text">
+        <p class="pill">Digoreng pagi ini, Rp2.000 / biji</p>
+        <h1><span>Gigit satu,</span> <span class="pk">pasti nambah dua.</span></h1>
+        <p class="tagline" id="tagline"></p>
+        <p class="desc">Dari Pasar 4.5, Tanjung Beringin, langsung ke tanganmu. Pilih rasa favoritmu, kami siapkan hangat dan manis.</p>
+        <div class="cta">
+          <button class="btn btn-main" data-page="menu">Lihat Menu</button>
+          <a class="btn btn-ghost" id="heroWA" target="_blank" rel="noopener">Pesan via WA</a>
+        </div>
+      </div>
+      <div class="hero-art" id="heroArt">
+        <svg class="badge-ring" viewBox="0 0 200 200" aria-hidden="true">
+          <defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+          <text class="rim"><textPath href="#circ" textLength="480" lengthAdjust="spacing">fresh setiap hari • empuk &amp; lembut • harga ramah •</textPath></text><text class="mid" x="100" y="112" text-anchor="middle">Rp2.000</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="marquee" aria-hidden="true"><div class="track" id="track"></div></div>
+
+    <section class="perks-band">
+      <div class="wrap perks">
+        <div class="perk reveal"><h3>Fresh.</h3><p>Digoreng pagi, habis hari itu juga. Tidak ada stok semalam.</p></div>
+        <div class="perk reveal"><h3>Murah.</h3><p>Cuma Rp2.000 sebiji. Jajan enak tanpa bikin dompet kaget.</p></div>
+        <div class="perk reveal"><h3>Empuk.</h3><p>Adonan ringan, topping melimpah. Habis satu, tangan langsung nambah.</p></div>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <h2 class="title reveal">Intip dapur kami</h2>
+      <div class="gallery" id="gallery"></div>
+
+      <div class="banner reveal">
+        <h2>Perut udah bunyi?</h2>
+        <p>Pilih rasanya, tentukan jumlahnya, sisanya kami yang urus.</p>
+        <button class="btn btn-pink" data-page="menu">Pesan Sekarang</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MENU ============ -->
+  <section class="page" id="page-menu">
+    <div class="wrap">
+      <div class="menu-head">
+        <p class="pill">Semua Rp2.000 / biji</p>
+        <h1>Pilih rasa favoritmu</h1>
+        <p class="desc">Atur jumlahnya, tekan Pesan, lalu kirim ke WhatsApp kami.</p>
+        <div class="chips" id="chips" role="tablist" aria-label="Filter menu"></div>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+</main>
+
+<button class="cart-fab" id="cartBtn" aria-label="Buka keranjang">
+  <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+  <span class="badge" id="badge" data-n="0">0</span>
+</button>
+<div class="overlay" id="overlay"></div>
+
+<aside class="cart" id="cart" aria-label="Keranjang pesanan" aria-hidden="true">
+  <div class="cart-top"><h2>Pesananmu</h2><button class="x" id="closeCart" aria-label="Tutup keranjang">✕</button></div>
+  <div class="cart-body">
+    <ul class="items" id="items"></ul>
+    <p class="empty" id="empty">Keranjang masih kosong. Yuk pilih donat dulu di halaman Menu.</p>
+    <div class="total" id="totalRow"><span>Total</span><strong id="total">Rp0</strong></div>
+    <div class="form" id="form">
+      <label>Nama pemesan<input id="fNama" type="text" placeholder="Contoh: Siti" autocomplete="name"><small class="err" id="eNama"></small></label>
+      <label>Nomor HP<input id="fHP" type="tel" inputmode="tel" placeholder="Contoh: 08123456789" autocomplete="tel"><small class="err" id="eHP"></small></label>
+      <fieldset><legend>Metode</legend>
+        <label class="radio"><input type="radio" name="metode" value="Ambil di tempat" checked><span>Ambil di tempat</span></label>
+        <label class="radio"><input type="radio" name="metode" value="Diantar"><span>Diantar</span></label>
+      </fieldset>
+      <label>Alamat / Catatan <em>(opsional)</em><textarea id="fCatatan" rows="2" placeholder="Alamat antar atau pesan tambahan"></textarea></label>
+      <button class="btn btn-wa wide" id="sendWA">Pesan via WhatsApp</button>
+    </div>
+  </div>
+</aside>
+
+<footer class="footer">
+  <div class="f-big" id="fBig">Donat Kembar</div>
+  <p class="f-text" id="fText"></p>
+  <a class="ig" id="igLink" target="_blank" rel="noopener" aria-label="Instagram">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+    <span>Instagram</span>
+  </a>
+  <small id="copy"></small>
+</footer>
+
+<div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
